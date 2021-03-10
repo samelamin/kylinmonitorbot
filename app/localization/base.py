@@ -37,7 +37,7 @@ class BaseLocalization(ABC):  # == English
 
     def welcome_message(self, info: ThorInfo):
         return (
-            f"Hello! This bot is here to help you get a Kylian Avatar! \n"
+            f"Hello! This bot is here to help you get a Kylin Avatar! \n"
             f"\n"
             f"🤗 Click on the button below to get started\n"
             f"\n"
