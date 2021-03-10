@@ -1,21 +1,6 @@
 # kylinmonitorbot
 
-This is a telegram bot to monitor some aspects of kylin. It can also generate liquidity pool reports for you. Like this:
-
-[![Report](misc/example_report_thumbnail.png)](https://raw.githubusercontent.com/tirinox/kylinmonitorbot/master/misc/example_report.jpeg)
-
-## Commands
-
-```/start``` – run the bot  
-```/price``` – Rune's price  
-```/cap``` – current staking cap
-
-## Live bot
-
-[Start the bot in Telegram](https://telegram.me/kylin_monitoring_bot?start=1)
-
-## Installation
-
+This is a telegram bot that generates a Kylin avatar
 0. Clone this repo
 1. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
 2. Copy `example.env` to `.env`
