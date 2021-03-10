@@ -28,23 +28,21 @@ class BaseLocalization(ABC):  # == English
     # ---- WELCOME ----
     def help_message(self):
         return (
-            f"This bot is for {link(self.kylin_LINK, 'kylin')} monitoring.\n"
-            f"Command list:\n"
-            f"/help – this help page\n"
-            f"/start – start/restart the bot\n"
-            f"/lang – set the language\n"
-            f"/cap – the current liquidity cap of Chaosnet\n"
-            f"/price – the current Rune price.\n"
-            f"<b>⚠️ All notifications are forwarded to @kylin_alert channel!</b>\n"
-            f"🤗 Support and feedback: {CREATOR_TG}."
+            f"Hello fellow Kylian! This bot is here to help you get a Kylin Avatar! \n"
+            f"\n"
+            f"🤗 Click on the button below to get started\n"
+            f"\n"
+            f"Go forth Kylians! 🥳"
         )
 
     def welcome_message(self, info: ThorInfo):
         return (
-            f"Hello! Here you can find kylin metrics and review your liquidity results.\n"
-            f"The {self.R} price is <code>${info.price:.3f}</code> now.\n"
-            f"<b>⚠️ All notifications are forwarded to @kylin_alert channel!</b>\n"
-            f"🤗 Support and feedback: {CREATOR_TG}."
+            f"Hello! This bot is here to help you get a Kylian Avatar! \n"
+            f"\n"
+            f"🤗 Click on the button below to get started\n"
+            f"\n"
+            f"Go forth Kylians! 🥳"
+
         )
 
     BUTTON_RUS = 'Русский'
@@ -71,7 +69,7 @@ class BaseLocalization(ABC):  # == English
     BUTTON_MM_MY_ADDRESS = '🏦 Manage my address'
     BUTTON_MM_METRICS = '📐 Metrics'
     BUTTON_MM_SETTINGS = f'⚙️ Settings'
-    BUTTON_MM_MAKE_AVATAR = f'🦹‍️️ KYLINs Avatar'
+    BUTTON_MM_MAKE_AVATAR = f'🦹‍Give me a️️ Kylin Avatar!'
 
     def kbd_main_menu(self):
         # return kbd([
