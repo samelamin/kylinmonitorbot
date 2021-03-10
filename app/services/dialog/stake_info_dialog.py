@@ -154,7 +154,7 @@ class StakeDialog(BaseDialog):
 
         value_hidden = not self.data.get(self.KEY_CAN_VIEW_VALUE, True)
         picture = await lp_pool_picture(stake_report, self.loc, value_hidden=value_hidden)
-        picture_io = img_to_bio(picture, f'Thorchain_LP_{pool}.png')
+        picture_io = img_to_bio(picture, f'kylin_LP_{pool}.png')
 
         # ANSWER
         await self.show_my_pools(query, edit=False)
@@ -189,7 +189,7 @@ class StakeDialog(BaseDialog):
 
         value_hidden = not self.data.get(self.KEY_CAN_VIEW_VALUE, True)
         picture = await lp_address_summary_picture(stake_reports, weekly_charts, self.loc, value_hidden=value_hidden)
-        picture_io = img_to_bio(picture, 'Thorchain_LP_Summary.png')
+        picture_io = img_to_bio(picture, 'kylin_LP_Summary.png')
 
         # ANSWER
         await self.show_my_pools(query, edit=False)

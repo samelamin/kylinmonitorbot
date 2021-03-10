@@ -43,10 +43,10 @@ class App:
         logging.info('-' * 100)
         logging.info(f"Log level: {log_level}")
 
-        d.loop = asyncio.get_event_loop()
+        # d.loop = asyncio.get_event_loop()
         d.db = DB(d.loop)
-
-        d.price_holder = LastPriceHolder()
+        #
+        # d.price_holder = LastPriceHolder()
 
     def create_bot_stuff(self):
         d = self.deps
@@ -75,40 +75,40 @@ class App:
     async def _run_background_jobs(self):
         d = self.deps
 
-        if 'REPLACE_RUNE_TIMESERIES_WITH_GECKOS' in os.environ:
-            await fill_rune_price_from_gecko(d.db)
-
-        self.ppf = PoolPriceFetcher(d)
-        await self.ppf.get_current_pool_data_full()
-
-        fetcher_cap = CapInfoFetcher(d, ppf=self.ppf)
-        fetcher_tx = StakeTxFetcher(d)
-        fetcher_queue = QueueFetcher(d)
-
-        notifier_cap = CapFetcherNotifier(d)
-        notifier_tx = StakeTxNotifier(d)
-        notifier_queue = QueueNotifier(d)
-        notifier_price = PriceNotifier(d)
-        notifier_pool_churn = PoolChurnNotifier(d)
-
-        fetcher_cap.subscribe(notifier_cap)
-        fetcher_tx.subscribe(notifier_tx)
-        fetcher_queue.subscribe(notifier_queue)
-        self.ppf.subscribe(notifier_price)
-        self.ppf.subscribe(notifier_pool_churn)
-
-        await asyncio.gather(*(task.run() for task in [
-            self.ppf,
-            fetcher_tx,
-            fetcher_cap,
-            fetcher_queue,
-        ]))
+        # if 'REPLACE_RUNE_TIMESERIES_WITH_GECKOS' in os.environ:
+        #     await fill_rune_price_from_gecko(d.db)
+        #
+        # self.ppf = PoolPriceFetcher(d)
+        # await self.ppf.get_current_pool_data_full()
+        #
+        # fetcher_cap = CapInfoFetcher(d, ppf=self.ppf)
+        # fetcher_tx = StakeTxFetcher(d)
+        # fetcher_queue = QueueFetcher(d)
+        #
+        # notifier_cap = CapFetcherNotifier(d)
+        # notifier_tx = StakeTxNotifier(d)
+        # notifier_queue = QueueNotifier(d)
+        # notifier_price = PriceNotifier(d)
+        # notifier_pool_churn = PoolChurnNotifier(d)
+        #
+        # fetcher_cap.subscribe(notifier_cap)
+        # fetcher_tx.subscribe(notifier_tx)
+        # fetcher_queue.subscribe(notifier_queue)
+        # self.ppf.subscribe(notifier_price)
+        # self.ppf.subscribe(notifier_pool_churn)
+        #
+        # await asyncio.gather(*(task.run() for task in [
+        #     self.ppf,
+        #     fetcher_tx,
+        #     fetcher_cap,
+        #     fetcher_queue,
+        # ]))
 
     async def on_startup(self, _):
         await self.connect_chat_storage()
 
-        self.deps.session = aiohttp.ClientSession(json_serialize=ujson.dumps)
-        await self.create_thor_node_connector()
+        # self.deps.session = aiohttp.ClientSession(json_serialize=ujson.dumps)
+        # await self.create_thor_node_connector()
 
         asyncio.create_task(self._run_background_jobs())
 

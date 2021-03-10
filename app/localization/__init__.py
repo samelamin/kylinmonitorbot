@@ -8,7 +8,7 @@ from services.lib.utils import Singleton
 class LocalizationManager(metaclass=Singleton):
     def __init__(self):
         self._langs = {
-            'rus': RussianLocalization(),
+            # 'rus': RussianLocalization(),
             'eng': EnglishLocalization()
         }
         self.default = EnglishLocalization()

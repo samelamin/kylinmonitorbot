@@ -7,7 +7,7 @@ from services.models.queue import QueueInfo
 
 
 class QueueFetcher(BaseFetcher):
-    QUEUE_PATH = '/thorchain/queue'
+    QUEUE_PATH = '/kylin/queue'
 
     def __init__(self, deps: DepContainer):
         period = parse_timespan_to_seconds(deps.cfg.queue.fetch_period)

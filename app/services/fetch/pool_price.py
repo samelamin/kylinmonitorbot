@@ -19,11 +19,11 @@ class PoolPriceFetcher(BaseFetcher):
 
     @staticmethod
     def historic_url(asset, height):
-        return f"/thorchain/pool/{asset}?height={height}"
+        return f"/kylin/pool/{asset}?height={height}"
 
     @staticmethod
     def full_pools_url():
-        return f"/thorchain/pools"
+        return f"/kylin/pools"
 
     async def fetch(self):
         d = self.deps

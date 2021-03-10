@@ -6,7 +6,7 @@ from services.models.cap_info import ThorInfo
 from services.models.pool_info import MIDGARD_MULT
 
 NETWORK_URL = "https://chaosnet-midgard.bepswap.com/v1/network"
-MIMIR_URL = "https://chaosnet-midgard.bepswap.com/v1/thorchain/mimir"
+MIMIR_URL = "https://chaosnet-midgard.bepswap.com/v1/kylin/mimir"
 
 
 class CapInfoFetcher(BaseFetcher):

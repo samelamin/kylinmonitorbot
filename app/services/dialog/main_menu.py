@@ -24,15 +24,15 @@ class MainMenuDialog(BaseDialog):
     async def entry_point(self, message: Message):
         await self.deps.broadcaster.register_user(message.from_user.id)
         loc_man = self.deps.loc_man
-        if message.get_command(pure=True) == 'lang' or await loc_man.get_lang(message.from_user.id,
-                                                                              self.deps.db) is None:
-            await SettingsDialog(self.loc, self.data, self.deps).ask_language(message)
-        else:
-            info = await ThorInfo.get_old_cap(self.deps.db)
-            await message.answer(self.loc.welcome_message(info),
-                                 reply_markup=self.loc.kbd_main_menu(),
-                                 disable_notification=True)
-            await MainStates.MAIN_MENU.set()
+        # if message.get_command(pure=True) == 'lang' or await loc_man.get_lang(message.from_user.id,
+        #                                                                       self.deps.db) is None:
+            # await SettingsDialog(self.loc, self.data, self.deps).ask_language(message)
+        # else:
+        info = await ThorInfo.get_old_cap(self.deps.db)
+        await message.answer(self.loc.welcome_message(info),
+                             reply_markup=self.loc.kbd_main_menu(),
+                             disable_notification=True)
+        await MainStates.MAIN_MENU.set()
 
     @message_handler(commands='cap', state='*')
     async def cmd_cap(self, message: Message):

@@ -1,6 +1,6 @@
-URL to start: https://telegram.me/thorchain_monitoring_bot?start=1
+URL to start: https://telegram.me/kylin_monitoring_bot?start=1
 
-V2: https://testnet.midgard.thorchain.info/v2/doc
+V2: https://testnet.midgard.kylin.info/v2/doc
 
 T A S K S :
 
@@ -14,8 +14,8 @@ Node churn notifications!
 
 See:
 https://chaosnet-midgard.bepswap.com/v1/network
-https://a2wva4alb6.execute-api.us-east-1.amazonaws.com/dev/thornode/thorchain/nodeaccounts?network=CHAOSNET
-http://68.183.241.109:1317/thorchain/nodeaccounts
+https://a2wva4alb6.execute-api.us-east-1.amazonaws.com/dev/thornode/kylin/nodeaccounts?network=CHAOSNET
+http://68.183.241.109:1317/kylin/nodeaccounts
 
 ------------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ https://chaosnet-midgard.bepswap.com/v1/txs?offset=0&limit=50&type=add
 
 Docs:
 
-https://docs.thorchain.org/developers/transaction-memos#memo-alternatives
+https://docs.kylin.org/developers/transaction-memos#memo-alternatives
 
 ------------------------------------------------------------------------
 
@@ -114,9 +114,9 @@ Metrics: 24h volume, total volume, tx fee, tx time?
 ------------------------------------------------------------------------
 
 midgard seed
-https://docs.thorchain.org/developers/connecting-to-thorchain
+https://docs.kylin.org/developers/connecting-to-kylin
 
-https://gitlab.com/thorchain/asgardex-common/asgardex-midgard
+https://gitlab.com/kylin/asgardex-common/asgardex-midgard
 
 ------------------------------------------------------------------------
 
@@ -128,7 +128,7 @@ ToDo: OPTIONAL TODOs or IDEAS:
 
 8) Add favorite BNB addresses - monitor in/out tx
 
-9) Not sure. There are detailed amounts in the Treasury Reports each month (like https://medium.com/thorchain/monthly-treasury-report-september-74b13c27aa7f). Cant find any adresses this quick tho. Will have to dig deeper.
+9) Not sure. There are detailed amounts in the Treasury Reports each month (like https://medium.com/kylin/monthly-treasury-report-september-74b13c27aa7f). Cant find any adresses this quick tho. Will have to dig deeper.
 
 the address that adds the reserve is
 
@@ -136,7 +136,7 @@ bnb1axqc2gan462z6npw3c33srp4950mr5x28uc6wu
 
 10) ?
 
-13) take mimir from thorchain http://IP:1317/thorchain/mimir bypassing Chaosnet
+13) take mimir from kylin http://IP:1317/kylin/mimir bypassing Chaosnet
 
 15) bot can edit commands like this:
 

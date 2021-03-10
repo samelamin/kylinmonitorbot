@@ -6,8 +6,8 @@ from tqdm import tqdm
 
 from services.models.time_series import PriceTimeSeries, RUNE_SYMBOL, RUNE_SYMBOL_DET
 
-COIN_CHART_GECKO = "https://api.coingecko.com/api/v3/coins/thorchain/market_chart?vs_currency=usd&days={days}"
-COIN_RANK_GECKO = "https://api.coingecko.com/api/v3/coins/thorchain?" \
+COIN_CHART_GECKO = "https://api.coingecko.com/api/v3/coins/kylin/market_chart?vs_currency=usd&days={days}"
+COIN_RANK_GECKO = "https://api.coingecko.com/api/v3/coins/kylin?" \
                   "tickers=false&market_data=false&community_data=false&developer_data=false"
 
 

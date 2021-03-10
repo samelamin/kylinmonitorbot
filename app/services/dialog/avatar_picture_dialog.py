@@ -30,12 +30,12 @@ async def get_userpic(user: User) -> Image.Image:
         return await download_tg_photo(first_pic)
 
 
-THOR_AVA_FRAME_PATH = './data/thor_ava_frame.png'
+KYLIN_AVA_FRAME_PATH = './data/kylin_ava_frame.png'
 
 
 @async_wrap
 def combine_frame_and_photo(photo: Image.Image):
-    frame = Image.open(THOR_AVA_FRAME_PATH)
+    frame = Image.open(KYLIN_AVA_FRAME_PATH)
 
     photo = photo.resize(frame.size).convert('RGBA')
     result = Image.alpha_composite(photo, frame)

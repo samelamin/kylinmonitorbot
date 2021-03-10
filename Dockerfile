@@ -5,6 +5,8 @@ FROM python:3.8-slim-buster as production
 #RUN apt-get -y update
 #RUN apt-get -y install pkg-config libsecp256k1-dev
 
+#docker stop kylin-node;docker rm kylin-node;docker run --name kylin-node -id -t kylin-node
+#python main.py config/config.yaml
 WORKDIR /app
 ADD ./app/requirements.txt .
 

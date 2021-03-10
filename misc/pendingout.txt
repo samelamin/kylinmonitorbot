@@ -1,4 +1,4 @@
-http://68.183.241.109:1317/thorchain/queue/outbound
+http://68.183.241.109:1317/kylin/queue/outbound
 
 [
 {

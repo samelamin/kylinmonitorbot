@@ -35,7 +35,7 @@ class ThorNodeAddressManager:
 
     async def get_thornode_active_list(self, node_ip):
         assert self.session
-        url = self.connection_url(node_ip) + "/thorchain/nodeaccounts"
+        url = self.connection_url(node_ip) + "/kylin/nodeaccounts"
         self.logger.info(f'requesting url: {url}')
         async with self.session.get(url) as resp:
             json = await resp.json()

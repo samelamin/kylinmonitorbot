@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
+    container_name: bot
     depends_on:
       - redis
     environment:

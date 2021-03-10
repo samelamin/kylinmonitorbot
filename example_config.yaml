@@ -4,7 +4,7 @@ log_level: INFO
 
 
 thornode:
-  seed: https://chaosnet-seed.thorchain.info/
+  seed: https://chaosnet-seed.kylin.info/
   consensus:
     cohort: 3
     agree: 2
@@ -18,7 +18,7 @@ telegram:
     token: "insert the bot token from @BotFather here"
   channels:
     - type: telegram
-      name: "@thorchain_alert"  # live channel
+      name: "@kylin_alert"  # live channel
       lang: eng
 
 

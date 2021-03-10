@@ -1,8 +1,8 @@
-# thorchainmonitorbot
+# kylinmonitorbot
 
-This is a telegram bot to monitor some aspects of THORChain. It can also generate liquidity pool reports for you. Like this:
+This is a telegram bot to monitor some aspects of kylin. It can also generate liquidity pool reports for you. Like this:
 
-[![Report](misc/example_report_thumbnail.png)](https://raw.githubusercontent.com/tirinox/thorchainmonitorbot/master/misc/example_report.jpeg)
+[![Report](misc/example_report_thumbnail.png)](https://raw.githubusercontent.com/tirinox/kylinmonitorbot/master/misc/example_report.jpeg)
 
 ## Commands
 
@@ -12,7 +12,7 @@ This is a telegram bot to monitor some aspects of THORChain. It can also generat
 
 ## Live bot
 
-[Start the bot in Telegram](https://telegram.me/thorchain_monitoring_bot?start=1)
+[Start the bot in Telegram](https://telegram.me/kylin_monitoring_bot?start=1)
 
 ## Installation
 
