@@ -26,7 +26,7 @@ async def download_tg_photo(photo: PhotoSize) -> Image.Image:
 async def get_userpic(user: User) -> Image.Image:
     pics = await user.get_profile_photos(0, 1)
     if pics.photos and pics.photos[0]:
-        first_pic: PhotoSize = pics.photos[0][0]
+        first_pic: PhotoSize = pics.photos[0][-1]
         return await download_tg_photo(first_pic)
 
 
